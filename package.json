@@ -1,0 +1,86 @@
+{
+	"name": "zenless-theme",
+	"displayName": "zenless themes",
+	"description": "A tehem of zenless zone zero",
+	"version": "1.0.0",
+	"publisher": "nekodendislike",
+	"license": "MIT",
+	"keywords": [
+		"theme",
+		"contrast",
+		"dark",
+		"light",
+		"tokyo",
+		"clean"
+	],
+	"galleryBanner": {
+		"color": "#1f2335",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.17.0"
+	},
+	"categories": [
+		"Themes",
+		"Other"
+	],
+	"repository": {
+		"url": "https://github.com/nekodendislike/zenless-theme",
+		"type": "git"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "ZZZ-theme.enableAnimations",
+				"title": "Enable Animations",
+				"category": "Animations"
+			}
+		],
+		"themes": [
+			{
+				"label": "Theme Anby",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme-anby-dark-color-theme.json"
+			},
+			{
+				"label": "Theme Billy",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme-billy-dark-color-theme.json"
+			},
+			{
+				"label": "Theme Elen",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme-elen-dark-color-theme.json"
+			},
+			{
+				"label": "Theme Jane",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme-jane-dark-color-theme.json"
+			},
+			{
+				"label": "Theme Miyabi",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme-miyabi-dark-color-theme.json"
+			},
+			{
+				"label": "Theme Nicole",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme-nicole-dark-color-theme.json"
+			},
+			{
+				"label": "Theme Pulchra",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme-pulchra-dark-color-theme.json"
+			},
+			{
+				"label": "Theme Zhuyuan",
+				"uiTheme": "vs-dark",
+				"path": "./themes/theme-zhuyuan-dark-color-theme.json"
+			}
+		]
+	},
+	"scripts": {
+		"package": "vsce package",
+		"publish": "vsce publish"
+	}
+}

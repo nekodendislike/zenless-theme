@@ -1,0 +1,7 @@
+{
+	"tasks": {
+		"build": "deno task gen && cd ~/.vscode/extensions/zenless-theme && deno run -A --unstable-unsafe-proto npm:vsce package && code-server --install-extension ./zenless-theme-1.0.0.vsix",
+		"gen": "deno run --allow-write --allow-read ./builder/gen.ts",
+		"reload": "deno run --allow-write --allow-read ./builder/gen.ts && code --reload"
+	}
+}

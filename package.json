@@ -5,7 +5,7 @@
 	"version": "1.0.4",
 	"publisher": "nekodendislike",
 	"license": "MIT",
-	"icon": "./icon",
+	"icon": "./icon.png",
 	"keywords": [
 		"theme",
 		"dark",

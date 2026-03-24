@@ -1,17 +1,14 @@
 {
 	"name": "zenless-theme",
 	"displayName": "zenless themes",
-	"description": "A tehem of zenless zone zero",
-	"version": "1.0.1",
+	"description": "enless zone zero inspired theme",
+	"version": "1.0.2",
 	"publisher": "nekodendislike",
 	"license": "MIT",
 	"keywords": [
 		"theme",
-		"contrast",
 		"dark",
-		"light",
-		"tokyo",
-		"clean"
+		"zzz"
 	],
 	"galleryBanner": {
 		"color": "#1f2335",

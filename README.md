@@ -1,6 +1,8 @@
 ## Zenless Theme
 Zenless is a VSCode themes inspired by the characters of Zenless Zone Zero.
 
+![Theme Miyabi](./images/screenshot_miyabi.png)
+Theme Miyabi
 ### Collected Characters
 - Anby
 - Billy

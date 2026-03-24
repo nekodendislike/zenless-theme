@@ -218,6 +218,22 @@ const tokenColors:tokenColorsArray = [
 			"foreground": c.jane.light
 		}
 	},{
+		"name": "async",
+		"scope": [
+			"storage.modifier.async"
+		],
+		"settings": {
+			"foreground": c.miyabi.light,
+		}
+	},{
+		"name": "meta block",
+		"scope": [
+			"meta.block"
+		],
+		"settings": {
+			"foreground": c.miyabi.light,
+		}
+	},{
 		"name": "md header",
 		"scope": [
 			"markup.heading"

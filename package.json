@@ -1,8 +1,8 @@
 {
 	"name": "zenless-theme",
-	"displayName": "zenless themes",
-	"description": "zenless zone zero inspired theme",
-	"version": "1.0.4",
+	"displayName": "Zenless Theme",
+	"description": "Zenless Zone Zero inspired theme",
+	"version": "1.0.5",
 	"publisher": "nekodendislike",
 	"license": "MIT",
 	"icon": "icon.png",
@@ -19,8 +19,7 @@
 		"vscode": "^1.17.0"
 	},
 	"categories": [
-		"Themes",
-		"Other"
+		"Themes"
 	],
 	"repository": {
 		"url": "https://github.com/nekodendislike/zenless-theme",
@@ -30,7 +29,7 @@
 		"commands": [
 			{
 				"command": "ZZZ-theme.enableAnimations",
-				"title": "Enable Animations",
+				"title": "Enable Animations(Coming soon!)",
 				"category": "Animations"
 			}
 		],

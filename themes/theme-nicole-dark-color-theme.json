@@ -274,6 +274,24 @@
 			}
 		},
 		{
+			"name": "async",
+			"scope": [
+				"storage.modifier.async"
+			],
+			"settings": {
+				"foreground": "#22bdcc"
+			}
+		},
+		{
+			"name": "meta block",
+			"scope": [
+				"meta.block"
+			],
+			"settings": {
+				"foreground": "#22bdcc"
+			}
+		},
+		{
 			"name": "md header",
 			"scope": [
 				"markup.heading"

@@ -22,6 +22,7 @@ for await(const con of config.themes){
 		path: `./themes/${nameme}`
 	})
 }
+
 packagejson.contributes.themes = themes
 await Deno.writeTextFile('./package.json',JSON.stringify(packagejson,null,'\t'))
 console.log(`sucsessed ${themes.length} themes update.`)

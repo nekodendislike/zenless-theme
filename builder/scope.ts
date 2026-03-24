@@ -211,6 +211,7 @@ const scope = [
 	"meta.object-literal entity.name.function",
 	"meta.object-literal.key",
 	"meta.objectliteral meta.object.member meta.objectliteral meta.object.member meta.objectliteral meta.object.member meta.object-literal.key",
+	"meta.object.member",
 	"meta.other.type.phpdoc.php keyword.other.type.php",
 	"meta.other.type.phpdoc.php punctuation.separator.inheritance.php",
 	"meta.other.type.phpdoc.php support.class",

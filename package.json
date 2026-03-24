@@ -2,9 +2,10 @@
 	"name": "zenless-theme",
 	"displayName": "zenless themes",
 	"description": "zenless zone zero inspired theme",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"publisher": "nekodendislike",
 	"license": "MIT",
+	"icon": "./icon",
 	"keywords": [
 		"theme",
 		"dark",

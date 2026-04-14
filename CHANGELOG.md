@@ -1,3 +1,8 @@
+## 1.1.0
+- Fix some syntax highlight error
+- Tuned color for hover content in list
+- Prepared Animation
+
 ## 1.0.5
 Fix async/new keyword is not hilighted
 ## 1.0.4 ~ 1.0.1

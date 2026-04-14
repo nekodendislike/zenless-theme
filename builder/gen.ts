@@ -25,4 +25,4 @@ for await(const con of config.themes){
 
 packagejson.contributes.themes = themes
 await Deno.writeTextFile('./package.json',JSON.stringify(packagejson,null,'\t'))
-console.log(`sucsessed ${themes.length} themes update.`)
+console.log(`Sucsessed ${themes.length} themes update.`)

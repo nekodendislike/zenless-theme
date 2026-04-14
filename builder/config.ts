@@ -1,4 +1,3 @@
-import { parseCookie } from "asset:///node/undici/cookies.d.ts";
 import { colorPayload, Payload, type semanticTokenColors, tokenColorsArray, VSCodeTheme } from "./template.d.ts";
 
 const parrets = {
@@ -99,14 +98,8 @@ const parrets = {
 const {character: c} = parrets
 const p = parrets;
 
-// 色味,現在不使用
-const colors: colorPayload = {};
+const tokenNoColors:tokenColorsArray = [
 
-const setting:Record<string,boolean> = {
-	activityBarLine: true,
-}
-
-const tokenColors:tokenColorsArray = [
 	{
 		"scope": "emphasis",
 		"settings": {
@@ -117,7 +110,11 @@ const tokenColors:tokenColorsArray = [
 		"settings": {
 			"fontStyle": "bold"
 		}
-	},{
+	},
+];
+
+const tokenEtcColors: tokenColorsArray = [
+	{
 		"name": "invalid",
 		"scope": "invalid",
 		"settings": {
@@ -132,41 +129,6 @@ const tokenColors:tokenColorsArray = [
 			"foreground": c.pulchra.dark
 		}
 	},{
-		"name": "number",
-		"scope": [
-			"constant.numeric"
-		],
-		"settings": {
-			"foreground": p.ice_light
-		}
-	},{
-		"name": "keyword control",
-		"scope": [
-			"keyword.control"
-		],
-		"settings": {
-			"foreground": c.vivian.light2
-		}
-	},{
-		"name": "variable other",
-		"scope": [
-			"variable.other.object",
-			"variable.other.object.property",
-			"variable.other.property",
-			"variable.other.readwrite.alias",
-		],
-		"settings": {
-			"foreground": c.jane.light
-		}
-	},{
-		"name": "number",
-		"scope": [
-			"constant.numeric"
-		],
-		"settings": {
-			"foreground": p.ice_light
-		}
-	},{
 		"name": "string",
 		"scope": [
 			"string"
@@ -174,7 +136,11 @@ const tokenColors:tokenColorsArray = [
 		"settings": {
 			"foreground": c.pulchra.light
 		}
-	},{
+	},
+];
+
+const tokenCantSortColors: tokenColorsArray = [
+	{
 		"name": "type",
 		"scope": [
 			"constant.language",
@@ -185,15 +151,47 @@ const tokenColors:tokenColorsArray = [
 		"settings": {
 			"foreground": c.zhuyuan.light3
 		}
-	},{
-		"name": "variable constant",
+	},
+];
+const tokenConstantColors: tokenColorsArray = [
+	{
+		"name": "number",
 		"scope": [
-			"variable.other.constant"
+			"constant.numeric"
 		],
 		"settings": {
-			"foreground": c.miyabi.light
+			"foreground": p.ice_light
+		}
+	},
+];
+const tokenKeywordColors: tokenColorsArray = [{
+		"name": "keyword control",
+		"scope": [
+			"keyword.control"
+		],
+		"settings": {
+			"foreground": c.vivian.light2
 		}
 	},{
+		"name": "keyword new",
+		"scope": [
+			"keyword.operator.new"
+		],
+		"settings": {
+			"foreground": c.zhuyuan.light2,
+		}
+	},{
+		name: "=",
+		scope: [
+			"keyword.operator.assignment"
+		],
+		settings: {
+			foreground: c.miyabi.light
+		}
+	}
+];
+const tokenEntityColors: tokenColorsArray = [
+	{
 		"name": "type name",
 		"scope": [
 			"entity.name.type"
@@ -210,20 +208,31 @@ const tokenColors:tokenColorsArray = [
 			"foreground": c.anby.light
 		}
 	},{
+		"name": "html tag",
+		"scope": [
+			"entity.name.tag"
+		],
+		"settings": {
+			"foreground": c.miyabi.light
+		}
+	},{
+		"name": "html attribute",
+		"scope": [
+			"entity.other.attribute-name"
+		],
+		"settings": {
+			"foreground": c.jane.light
+		}
+	},
+];
+const tokenMetaColors: tokenColorsArray = [
+	{
 		"name": "property?",
 		"scope": [
 			"meta.object.member"
 		],
 		"settings": {
 			"foreground": c.jane.light
-		}
-	},{
-		"name": "async",
-		"scope": [
-			"storage.modifier.async"
-		],
-		"settings": {
-			"foreground": c.miyabi.light,
 		}
 	},{
 		"name": "meta block",
@@ -233,7 +242,69 @@ const tokenColors:tokenColorsArray = [
 		"settings": {
 			"foreground": c.miyabi.light,
 		}
+	},
+];
+const tokenStorageColors: tokenColorsArray = [
+	{
+		"name": "async",
+		"scope": [
+			"storage.modifier.async"
+		],
+		"settings": {
+			"foreground": c.miyabi.light,
+		}
 	},{
+		"name": "modi",
+		"scope": [
+			"storage.modifier"
+		],
+		"settings": {
+			"foreground": c.miyabi.light,
+		}
+	},
+]
+const tokenVariableColors: tokenColorsArray = [
+	{
+		"name": "variable other",
+		"scope": [
+			"variable.other.object",
+			"variable.other.object.property",
+			"variable.other.property",
+			"variable.other.readwrite",
+			"variable.other.readwrite.alias",
+		],
+		"settings": {
+			"foreground": c.jane.light
+		}
+	},{
+		"name": "variable constant",
+		"scope": [
+			"variable.other.constant"
+		],
+		"settings": {
+			"foreground": c.miyabi.light
+		}
+	},{
+		"name": "property",
+		scope: [
+			"variable.parameter"
+		],
+		settings: {
+			foreground: c.jane.light
+		}
+	}
+];
+const tokenSourceColors: tokenColorsArray = [{
+		"name": "python",
+		"scope": [
+			"source.python"
+		],
+		"settings": {
+			"foreground": c.zhuyuan.light2,
+		}
+	}
+];
+const tokenMarkupColors: tokenColorsArray = [{
 		"name": "md header",
 		"scope": [
 			"markup.heading"
@@ -245,6 +316,19 @@ const tokenColors:tokenColorsArray = [
 	},
 ];
 
+const tokenColors:tokenColorsArray = [
+	...tokenCantSortColors,
+	...tokenConstantColors,
+	...tokenEntityColors,
+	...tokenEtcColors,
+	...tokenKeywordColors,
+	...tokenMarkupColors,
+	...tokenMetaColors,
+	...tokenNoColors,
+	...tokenSourceColors,
+	...tokenStorageColors,
+	...tokenVariableColors
+]
 const semanticHighlighting = true;
 const semanticTokenColors: semanticTokenColors = {
 	"enumMember": {
@@ -298,7 +382,7 @@ const colorPatchAuto = (light: string,dark:string):colorPayload => {
 		
 		//list and trees
 		"list.hoverForeground": parrets.black,
-		"list.hoverBackground": parrets.select + 'bb',
+		"list.hoverBackground": parrets.select + '99',
 		"list.focusBackground": dark,
 		"list.highlightForeground": light,
 		"list.activeSelectionBackground": dark,
@@ -306,7 +390,7 @@ const colorPatchAuto = (light: string,dark:string):colorPayload => {
 		
 		"list.inactiveSelectionBackground": parrets.gray,
 		"list.inactiveSelectionForeground": parrets.black,
-
+		
 		"tree.indentGuidesStroke": dark,
 
 		//actibity bar
@@ -482,6 +566,8 @@ const colorPatchAuto = (light: string,dark:string):colorPayload => {
 		"merge.incomingHeaderBackground": c.zhuyuan.light2 + '99',
 		"merge.incomingContentBackground": c.zhuyuan.dark + '99',
 		
+		//terminal
+		"terminal.hoverHighlightBackground": p.select + '66'
 	}
 }
 
@@ -543,5 +629,5 @@ const ZhuyuanDark: VSCodeTheme = {
 }
 export const config: Payload = {
 	themes: [ AnbyDark,BillyDark,ElenDark,JaneDark,MiyabiDark,NicoleDark,PulchraDark,ZhuyuanDark ],
-	common: { tokenColors,colors,semanticHighlighting,semanticTokenColors }
+	common: { tokenColors,semanticHighlighting,semanticTokenColors }
 }

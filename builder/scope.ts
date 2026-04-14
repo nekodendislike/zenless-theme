@@ -298,6 +298,7 @@ const scope = [
 	"source.less support.type.property-name",
 	"source.postcss support.type.property-name",
 	"source.powershell variable.other.member",
+	"source.python",
 	"source.sass keyword.control",
 	"source.sass support.type.property-name",
 	"source.stylus support.type.property-name",
@@ -390,7 +391,10 @@ const scope = [
 	"string.unquoted.alias.graphql",
 	"string.unquoted.graphql",
 	"string.value",
+
+	/**string. */
 	"string",
+	
 	"strong",
 	"support.class",
 	"support.constant.font-name",
@@ -451,6 +455,10 @@ const scope = [
 	"variable.other.object.property",
 	"variable.other.object",
 	"variable.other.property",
+
+	/**let hogeData = somehoge.execute() */
+	"variable.other.readwrite",
+
 	"variable.other.readwrite.alias",
 	"variable.parameter.function.language.special",
 	"variable.parameter.handlebars",
@@ -469,6 +477,7 @@ const scope = [
     "string.quoted.docstring.multi.python punctuation.definition.string.begin",
     "string.quoted.docstring.multi.python punctuation.definition.string.end",
     "variable.parameter",
+	"keyword.operator.assignment"
 ] as const;	
 const semantic = [
     "*.defaultLibrary",

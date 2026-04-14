@@ -18,7 +18,7 @@
 		"scrollbarSlider.activeBackground": "#ffffff",
 		"progressBar.background": "#22bdcc",
 		"list.hoverForeground": "#000000",
-		"list.hoverBackground": "#fcdc00bb",
+		"list.hoverBackground": "#fcdc0099",
 		"list.focusBackground": "#0d474b",
 		"list.highlightForeground": "#22bdcc",
 		"list.activeSelectionBackground": "#0d474b",
@@ -145,86 +145,11 @@
 		"merge.currentHeaderBackground": "#7ee7c099",
 		"merge.currentContentBackground": "#57a19999",
 		"merge.incomingHeaderBackground": "#649eff99",
-		"merge.incomingContentBackground": "#00265699"
+		"merge.incomingContentBackground": "#00265699",
+		"terminal.hoverHighlightBackground": "#fcdc0066"
 	},
 	"semanticHighlighting": true,
 	"tokenColors": [
-		{
-			"scope": "emphasis",
-			"settings": {
-				"fontStyle": "italic"
-			}
-		},
-		{
-			"scope": "strong",
-			"settings": {
-				"fontStyle": "bold"
-			}
-		},
-		{
-			"name": "invalid",
-			"scope": "invalid",
-			"settings": {
-				"foreground": "#ff2233"
-			}
-		},
-		{
-			"name": "comment",
-			"scope": [
-				"comment"
-			],
-			"settings": {
-				"foreground": "#404f58"
-			}
-		},
-		{
-			"name": "number",
-			"scope": [
-				"constant.numeric"
-			],
-			"settings": {
-				"foreground": "#84f2f3"
-			}
-		},
-		{
-			"name": "keyword control",
-			"scope": [
-				"keyword.control"
-			],
-			"settings": {
-				"foreground": "#cc83eb"
-			}
-		},
-		{
-			"name": "variable other",
-			"scope": [
-				"variable.other.object",
-				"variable.other.object.property",
-				"variable.other.property",
-				"variable.other.readwrite.alias"
-			],
-			"settings": {
-				"foreground": "#91daed"
-			}
-		},
-		{
-			"name": "number",
-			"scope": [
-				"constant.numeric"
-			],
-			"settings": {
-				"foreground": "#84f2f3"
-			}
-		},
-		{
-			"name": "string",
-			"scope": [
-				"string"
-			],
-			"settings": {
-				"foreground": "#ff8916"
-			}
-		},
 		{
 			"name": "type",
 			"scope": [
@@ -238,12 +163,12 @@
 			}
 		},
 		{
-			"name": "variable constant",
+			"name": "number",
 			"scope": [
-				"variable.other.constant"
+				"constant.numeric"
 			],
 			"settings": {
-				"foreground": "#22bdcc"
+				"foreground": "#84f2f3"
 			}
 		},
 		{
@@ -265,27 +190,70 @@
 			}
 		},
 		{
-			"name": "property?",
+			"name": "html tag",
 			"scope": [
-				"meta.object.member"
-			],
-			"settings": {
-				"foreground": "#91daed"
-			}
-		},
-		{
-			"name": "async",
-			"scope": [
-				"storage.modifier.async"
+				"entity.name.tag"
 			],
 			"settings": {
 				"foreground": "#22bdcc"
 			}
 		},
 		{
-			"name": "meta block",
+			"name": "html attribute",
 			"scope": [
-				"meta.block"
+				"entity.other.attribute-name"
+			],
+			"settings": {
+				"foreground": "#91daed"
+			}
+		},
+		{
+			"name": "invalid",
+			"scope": "invalid",
+			"settings": {
+				"foreground": "#ff2233"
+			}
+		},
+		{
+			"name": "comment",
+			"scope": [
+				"comment"
+			],
+			"settings": {
+				"foreground": "#404f58"
+			}
+		},
+		{
+			"name": "string",
+			"scope": [
+				"string"
+			],
+			"settings": {
+				"foreground": "#ff8916"
+			}
+		},
+		{
+			"name": "keyword control",
+			"scope": [
+				"keyword.control"
+			],
+			"settings": {
+				"foreground": "#cc83eb"
+			}
+		},
+		{
+			"name": "keyword new",
+			"scope": [
+				"keyword.operator.new"
+			],
+			"settings": {
+				"foreground": "#649eff"
+			}
+		},
+		{
+			"name": "=",
+			"scope": [
+				"keyword.operator.assignment"
 			],
 			"settings": {
 				"foreground": "#22bdcc"
@@ -299,6 +267,94 @@
 			"settings": {
 				"foreground": "#91daed",
 				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "property?",
+			"scope": [
+				"meta.object.member"
+			],
+			"settings": {
+				"foreground": "#91daed"
+			}
+		},
+		{
+			"name": "meta block",
+			"scope": [
+				"meta.block"
+			],
+			"settings": {
+				"foreground": "#22bdcc"
+			}
+		},
+		{
+			"scope": "emphasis",
+			"settings": {
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"scope": "strong",
+			"settings": {
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "python",
+			"scope": [
+				"source.python"
+			],
+			"settings": {
+				"foreground": "#649eff"
+			}
+		},
+		{
+			"name": "async",
+			"scope": [
+				"storage.modifier.async"
+			],
+			"settings": {
+				"foreground": "#22bdcc"
+			}
+		},
+		{
+			"name": "modi",
+			"scope": [
+				"storage.modifier"
+			],
+			"settings": {
+				"foreground": "#22bdcc"
+			}
+		},
+		{
+			"name": "variable other",
+			"scope": [
+				"variable.other.object",
+				"variable.other.object.property",
+				"variable.other.property",
+				"variable.other.readwrite",
+				"variable.other.readwrite.alias"
+			],
+			"settings": {
+				"foreground": "#91daed"
+			}
+		},
+		{
+			"name": "variable constant",
+			"scope": [
+				"variable.other.constant"
+			],
+			"settings": {
+				"foreground": "#22bdcc"
+			}
+		},
+		{
+			"name": "property",
+			"scope": [
+				"variable.parameter"
+			],
+			"settings": {
+				"foreground": "#91daed"
 			}
 		}
 	],

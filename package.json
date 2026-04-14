@@ -2,7 +2,7 @@
 	"name": "zenless-theme",
 	"displayName": "Zenless Theme",
 	"description": "Zenless Zone Zero inspired theme",
-	"version": "1.0.5",
+	"version": "1.1.0",
 	"publisher": "nekodendislike",
 	"license": "MIT",
 	"icon": "icon.png",
@@ -16,7 +16,7 @@
 		"theme": "dark"
 	},
 	"engines": {
-		"vscode": "^1.17.0"
+		"vscode": "^1.100.0"
 	},
 	"categories": [
 		"Themes"
@@ -24,6 +24,13 @@
 	"repository": {
 		"url": "https://github.com/nekodendislike/zenless-theme",
 		"type": "git"
+	},
+	"main": "./src/extension",
+	"activationEvents": [],
+	"dependencies": {},
+	"devDependencies": {
+		"vscode": "^1.1.37",
+		"@types/vscode": "^1.100.0"
 	},
 	"contributes": {
 		"commands": [
@@ -75,9 +82,5 @@
 				"path": "./themes/theme-zhuyuan-dark-color-theme.json"
 			}
 		]
-	},
-	"scripts": {
-		"package": "vsce package",
-		"publish": "vsce publish"
 	}
 }

@@ -14,7 +14,7 @@ Theme Miyabi
 - Zhuyuan
 
 ### build system
-This repo has a building system using with Deno and Typescript.
+This repo has a building system using with Typescript.
 The color settings are described in ```config.ts``` within the builder folder.
 To build modified color themes, You should run in console: ```deno task reload```.
 ### Credits

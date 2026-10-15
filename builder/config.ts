@@ -64,7 +64,7 @@ const parrets = {
 
 	info: "#00ff66",
 	warn: "#ffe511",
-	error: "ff0000",
+	error: "#ff0000",
 
 	checkGreen: "#03cc0f",
 
@@ -127,7 +127,7 @@ const tokenEtcColors: tokenColorsArray = [
 			"comment"
 		],
 		"settings": {
-			"foreground": c.pulchra.dark
+			"foreground": p.gray
 		}
 	},{
 		"name": "string",
@@ -355,23 +355,38 @@ const semanticTokenColors: semanticTokenColors = {
 
 // 色味の設定は全部こっちだぜ！！
 const colorPatchAuto = (light: string,dark:string):colorPayload => {
-	return {
-		
-		//base colors
-		"focusBorder": parrets.select+'aa',
-
+	const baseColor = {
 		"foreground": parrets.white,
 		"disabledForeground": parrets.gray,
-
-		//window border
+		"errorForeground": p.error,
+		"focusBorder": parrets.select+'aa',
+	};
+	const button = {
+		"button.border": p.darkgray,
+		"button.foreground": p.white,
+		"button.background": dark,
+		"button.hoverBackground": light,
+	};
+	const color = {
+		activityBar: {
+			"activityBar.foreground": light,
+			"activityBar.background": parrets.ash,
+		}
+	}
+	return {
+		//base colors
+		...baseColor,
 
 		//action colors
 		"textSeparator.foreground": parrets.gray,
 
-		//button control
-		"button.background": dark,
-		"button.border": parrets.darkgray,
-		"button.hoverBackground": light,
+		//toolbar
+		"toolbar.hoverBackground": p.select,
+
+		//button
+		...button,
+			
+
 		"radio.activeForeground": parrets.black,
 		"radio.activeBackground": parrets.checkGreen,
 
@@ -404,9 +419,8 @@ const colorPatchAuto = (light: string,dark:string):colorPayload => {
 		
 		"tree.indentGuidesStroke": dark,
 
-		//actibity bar
-		"activityBar.background": parrets.ash,
-		"activityBar.foreground": light,
+		//activity bar
+		...color.activityBar,
 		//side bar
 		"sideBar.foreground": parrets.lightgray,
 		"sideBar.background": parrets.black,
@@ -428,17 +442,32 @@ const colorPatchAuto = (light: string,dark:string):colorPayload => {
 		"editorGroupHeader.tabsBorder": dark,
 		"editorGroupHeader.border": parrets.black,
 
-		"tab.hoverBorder":light,
-		"tab.border": parrets.black,
-		"tab.activeBorder": light,
+
+		// Tab
+			//normal
+			"tab.border": parrets.black,
+
+			//hover
+			"tab.hoverBorder":light,
+			"tab.hoverForeground": parrets.black,
+			"tab.hoverBackground": parrets.select + '99',
+			"modernTab.hoverForeground": parrets.white,
+			"modernTab.hoverBackground": parrets.select + '99',
+			"modernEditorTab.hoverForeground": light,
+			"modernEditorTab.hoverBackground": parrets.select + '99',
+
+			"tab.activeBorder": light,
+
 		"tab.activeForeground": parrets.white,
 		"tab.activeBackground": parrets.black,
-		"tab.activeModifiedBorder": dark,
+		"tab.activeModifiedBorder": parrets.info,
 		"tab.inactiveForeground": light,
 		"tab.inactiveBackground": parrets.black,
 		"tab.unfocusedActiveForeground": light,
 		"tab.unfocusedInactiveForeground": light,
 		"tab.selectedForeground": parrets.white,
+		"tab.unfocusedHoverForeground": parrets.white,
+		"tab.unfocusedHoverBackground": parrets.select,
 
 		//breadcrumb
 		"breadcrumb.focusForeground": light,

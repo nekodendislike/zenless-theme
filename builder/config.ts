@@ -69,6 +69,7 @@ const parrets = {
 	checkGreen: "#03cc0f",
 
 	black: "#000000",
+	supergray: "#080808",
 	darkgray: "#111111",
 	ash: "#252525",
 	mouse: "#454545",
@@ -202,7 +203,8 @@ const tokenEntityColors: tokenColorsArray = [
 	},{
 		"name": "function",
 		"scope": [
-			"entity.name.function"
+			"entity.name.function",
+			"support.function.glsl"
 		],
 		"settings": {
 			"foreground": c.anby.light
@@ -302,6 +304,15 @@ const tokenSourceColors: tokenColorsArray = [{
 		"settings": {
 			"foreground": c.zhuyuan.light2,
 		}
+	},
+	{
+		"name": "glsl",
+		"scope": [
+			"source.glsl"
+		],
+		"settings": {
+			"foreground": c.jane.light,
+		}
 	}
 ];
 const tokenMarkupColors: tokenColorsArray = [{
@@ -388,8 +399,8 @@ const colorPatchAuto = (light: string,dark:string):colorPayload => {
 		"list.activeSelectionBackground": dark,
 		"list.activeSelectionForeground": parrets.white,
 		
-		"list.inactiveSelectionBackground": parrets.gray,
-		"list.inactiveSelectionForeground": parrets.black,
+		"list.inactiveSelectionBackground": parrets.black,
+		"list.inactiveSelectionForeground": parrets.lightgray,
 		
 		"tree.indentGuidesStroke": dark,
 
@@ -418,14 +429,16 @@ const colorPatchAuto = (light: string,dark:string):colorPayload => {
 		"editorGroupHeader.border": parrets.black,
 
 		"tab.hoverBorder":light,
-		
-		"tab.border": p.black,
-		
+		"tab.border": parrets.black,
 		"tab.activeBorder": light,
-		"tab.activeForeground": light,
-		"tab.activeBackground": p.ash,
+		"tab.activeForeground": parrets.white,
+		"tab.activeBackground": parrets.black,
 		"tab.activeModifiedBorder": dark,
-		"tab.inactiveBackground": p.black,
+		"tab.inactiveForeground": light,
+		"tab.inactiveBackground": parrets.black,
+		"tab.unfocusedActiveForeground": light,
+		"tab.unfocusedInactiveForeground": light,
+		"tab.selectedForeground": parrets.white,
 
 		//breadcrumb
 		"breadcrumb.focusForeground": light,

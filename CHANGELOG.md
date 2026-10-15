@@ -1,3 +1,6 @@
+## 1.2.1
+- Fix some color conflict
+
 ## 1.1.0
 - Fix some syntax highlight error
 - Tuned color for hover content in list

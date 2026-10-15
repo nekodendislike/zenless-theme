@@ -23,8 +23,8 @@
 		"list.highlightForeground": "#b2b2b2",
 		"list.activeSelectionBackground": "#404049",
 		"list.activeSelectionForeground": "#ffffff",
-		"list.inactiveSelectionBackground": "#888888",
-		"list.inactiveSelectionForeground": "#000000",
+		"list.inactiveSelectionBackground": "#000000",
+		"list.inactiveSelectionForeground": "#cdcdcd",
 		"tree.indentGuidesStroke": "#404049",
 		"activityBar.background": "#252525",
 		"activityBar.foreground": "#b2b2b2",
@@ -45,10 +45,14 @@
 		"tab.hoverBorder": "#b2b2b2",
 		"tab.border": "#000000",
 		"tab.activeBorder": "#b2b2b2",
-		"tab.activeForeground": "#b2b2b2",
-		"tab.activeBackground": "#252525",
+		"tab.activeForeground": "#ffffff",
+		"tab.activeBackground": "#000000",
 		"tab.activeModifiedBorder": "#404049",
+		"tab.inactiveForeground": "#b2b2b2",
 		"tab.inactiveBackground": "#000000",
+		"tab.unfocusedActiveForeground": "#b2b2b2",
+		"tab.unfocusedInactiveForeground": "#b2b2b2",
+		"tab.selectedForeground": "#ffffff",
 		"breadcrumb.focusForeground": "#b2b2b2",
 		"breadcrumb.background": "#000000",
 		"pickerGroup.foreground": "#b2b2b2",
@@ -183,7 +187,8 @@
 		{
 			"name": "function",
 			"scope": [
-				"entity.name.function"
+				"entity.name.function",
+				"support.function.glsl"
 			],
 			"settings": {
 				"foreground": "#afce32"
@@ -306,6 +311,15 @@
 			],
 			"settings": {
 				"foreground": "#649eff"
+			}
+		},
+		{
+			"name": "glsl",
+			"scope": [
+				"source.glsl"
+			],
+			"settings": {
+				"foreground": "#91daed"
 			}
 		},
 		{
